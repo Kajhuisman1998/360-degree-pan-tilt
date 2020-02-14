@@ -1,0 +1,4 @@
+{
+    "board": "arduino:avr:uno",
+    "sketch": "src\\360g_Pan_tilt.ino"
+}
