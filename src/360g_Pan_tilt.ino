@@ -33,7 +33,7 @@ Stepper stepperY(STEPPER_STEPS, STEPPER_M2_IN4, STEPPER_M2_IN2, STEPPER_M2_IN3, 
 
 void setup()
 {
-  
+  Serial.begin(9600);
 }
 
 void loop()
