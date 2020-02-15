@@ -38,11 +38,28 @@ void setup()
 
 void loop()
 {
+  int direction_x;
+  int direction_y;
+
+  if (Serial.available()) {
+    byte start_package = Serial.read();
+    direction_x = Serial.read();
+    direction_y = Serial.read();
+
+    if(start_package != '<') {
+      delay(20);
+      return;
+    }
+  } else {
+    delay(20);
+    return;
+  }
+
   // read analog xue from the potentiometer
   // Als je een remote controller wilt gebruiken,
   // Zorg dan dat deze twee waarden tussen CONTROL_MIN en CONTROL_MAX zijn
-  int direction_x = analogRead(CONTROL_PIN_X);
-  int direction_y = analogRead(CONTROL_PIN_Y);
+  // int direction_x = analogRead(CONTROL_PIN_X);
+  // int direction_y = analogRead(CONTROL_PIN_Y);
 
   int control_median = CONTROL_MAX / 2;
 
@@ -70,7 +87,7 @@ void loop()
   }
   // * EIND MOTOR X ***********************
 
-  // * BEGIN MOTOR X ***********************
+  // * BEGIN MOTOR Y ***********************
   int control_y_absolute = abs(direction_y - control_median);
   int y_step_to = direction_y < control_median ? -STEPPER_STEPS_PER_TICK : STEPPER_STEPS_PER_TICK;
 
@@ -93,5 +110,5 @@ void loop()
     stepperY.setSpeed(speed_y);
     stepperY.step(y_step_to);
   }
-  // * EIND MOTOR X ***********************
+  // * EIND MOTOR Y ***********************
 }

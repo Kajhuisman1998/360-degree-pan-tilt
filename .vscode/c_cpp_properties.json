@@ -3,10 +3,10 @@
         {
             "name": "Win32",
             "includePath": [
-                "C:\\Program Files (x86)\\Arduino\\tools\\**",
-                "C:\\Program Files (x86)\\Arduino\\hardware\\arduino\\avr\\**",
                 "${workspaceFolder}/**",
-                "C:\\Program Files (x86)\\Arduino\\libraries",
+                "/home/robin/Downloads/arduino-1.8.12/hardware/arduino/avr/",
+                "/home/robin/Downloads/arduino-1.8.12/tools/",
+                "/home/robin/Downloads/arduino-1.9.12/libraries",
                 "/home/robin/Downloads/arduino-1.8.12/hardware/arduino/avr/**",
                 "/home/robin/Downloads/arduino-1.8.12/tools/**"
             ],
@@ -17,9 +17,27 @@
             ],
             "intelliSenseMode": "msvc-x64",
             "forcedInclude": [
-                "C:\\Program Files (x86)\\Arduino\\hardware\\arduino\\avr\\cores\\arduino\\Arduino.h",
                 "/home/robin/Downloads/arduino-1.8.12/hardware/arduino/avr/cores/arduino/Arduino.h"
             ]
+        },
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/home/robin/Downloads/arduino-1.9.12/libraries"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "clang-x64",
+            "compilerArgs": [],
+            "browse": {
+                "path": [
+                    "${workspaceFolder}/**"
+                ],
+                "limitSymbolsToIncludedHeaders": true
+            }
         }
     ],
     "version": 4
