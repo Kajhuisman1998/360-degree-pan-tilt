@@ -80,6 +80,7 @@ void loop()
     digitalWrite(STEPPER_M2_IN2, LOW);
     digitalWrite(STEPPER_M2_IN3, LOW);
     digitalWrite(STEPPER_M2_IN4, LOW);
+    
   }
   else
   {
