@@ -10,6 +10,7 @@ int const STEPPER_M1_IN3 = 10; // Digital
 int const STEPPER_M1_IN4 = 11; // Digital
 
 // define stepper motor 2 control pins
+// define stepper motor 2 control pins
 int const STEPPER_M2_IN1 = 4; // Digital
 int const STEPPER_M2_IN2 = 5; // Digital
 int const STEPPER_M2_IN3 = 6; // Digital
@@ -19,13 +20,14 @@ int const STEPPER_SPEED_LO = 50;      // Minimum speed (rpm)
 int const STEPPER_SPEED_HI = 450;     // Maximum speed (rpm)
 int const STEPPER_STEPS_PER_TICK = 1; // Steps to take per loop
 
+
 // joystick pot output is connected to Arduino A0
 int const CONTROL_PIN_X = A0;
 int const CONTROL_PIN_Y = A1;
 
 int const CONTROL_MIN = 0;       // Minimum controller value
 int const CONTROL_MAX = 1023;    // Maximum controller value
-int const CONTROL_DEADZONE = 15; // between 0 and (CONTROL_MAX / 2)
+int const CONTROL_DEADZONE = 30; // between 0 and (CONTROL_MAX / 2)
 
 // initialize stepper library
 Stepper stepperX(STEPPER_STEPS, STEPPER_M1_IN4, STEPPER_M1_IN2, STEPPER_M1_IN3, STEPPER_M1_IN1);
