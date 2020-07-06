@@ -1,5 +1,5 @@
 #include <SoftwareSerial.h>
-SoftwareSerial mySerial(4, 5); // RX, TX
+//SoftwareSerial mySerial(4, 5); // RX, TX
 const int Xpin = A0;  // Analog input pin that the joystick  is attached to
 const int Ypin = A1;  // Analog input pin that the joystick  is attached to
    //  value read from the Y pin
@@ -7,13 +7,13 @@ const int Ypin = A1;  // Analog input pin that the joystick  is attached to
 void setup() {
   // initialize serial communications at 9600 bps:
   Serial.begin(9600);
-  mySerial.begin(9600);
+  //mySerial.begin(9600);
 }
 
 void loop() {
   // read the analog in value:
-  mySerial.write("<");  
-  mySerial.write(analogRead(Xpin));
-  mySerial.write(analogRead(Ypin));
+  Serial.println("<");  
+  Serial.println(analogRead(Xpin));
+  Serial.println(analogRead(Ypin));
   delay(2);
 }
