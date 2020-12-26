@@ -12,8 +12,8 @@ void setup() {
 
 void loop() {
   // read the analog in value:
-  Serial.println("<");  
-  Serial.println(analogRead(Xpin));
-  Serial.println(analogRead(Ypin));
+  Serial.write("<");  
+  Serial.write(analogRead(Xpin));
+  Serial.write(analogRead(Ypin));
   delay(2);
 }
